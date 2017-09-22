@@ -82,15 +82,15 @@ if len(restore_list) == 0:
   print 'List empty, nothing found..'
   exit(1)
 
-print "[+] Copying databases into thaweddb.."
+#print "[+] Copying databases into thaweddb.."
 
-for db in restore_list:
-  if debug:
-    print "Executing: " + "cp -R " + frozenpath + db + " " + path + index + "/thaweddb/" 
+#for db in restore_list:
+#  if debug:
+#    print "Executing: " + "cp -R " + frozenpath + db + " " + path + index + "/thaweddb/" 
   #call(["cp","-R " + frozenpath + db + " " + path + index + "/thaweddb/"])
 
-print "[+] Rebuilding DBs"
-for db in restore_list:
-  if debug:
-    print "Executing: " + splunkbin +  "splunkd fsck  repair --one-bucket --include-hots --bucket-path=" + path + index + "/thaweddb/" + db + " --log-to--splunkd-log"
-  #call([splunkbin + "splunkd", "fsck  repair --one-bucket --include-hots --bucket-path=" + path + index + "/thaweddb/" + db + " --log-to--splunkd-log"])
+#print "[+] Rebuilding DBs"
+#for db in restore_list:
+#  if debug:
+#    print "Executing: " + splunkbin +  "splunkd fsck  repair --one-bucket --include-hots --bucket-path=" + path + index + "/thaweddb/" + db + " --log-to--splunkd-log"
+#  #call([splunkbin + "splunkd", "fsck  repair --one-bucket --include-hots --bucket-path=" + path + index + "/thaweddb/" + db + " --log-to--splunkd-log"])
